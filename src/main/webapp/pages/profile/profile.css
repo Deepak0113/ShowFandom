@@ -1,0 +1,139 @@
+:root{
+    --friend-profile-img-size: 50px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/*----- PROFILE CONTAINER -----*/
+.profile__container{
+    margin: 0 10%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*----- PROFILE HEADER -----*/
+.profile__header{
+    display: flex;
+    align-items: center;
+}
+
+
+/*----- CIRCULAR PROFILE -----*/
+.profile__header .circular__profile__big{
+    background-color: gainsboro;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 100%;
+    font-size: 50px;
+}
+
+
+/*----- PROFILE INFO -----*/
+.profile__header .profile__info{
+    margin-left: 20px;
+}
+
+.profile__header .profile__info p:nth-child(1){
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.profile__header .profile__info p:nth-child(2){
+    font-size: 20px;
+}
+
+
+/*----- PROFILE INTEREST -----*/
+.profile__header .profile__interest{
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+}
+
+.profile__header .profile__interest .interest{
+	cursor: pointer;
+}
+
+.profile__header .profile__interest .interest p:nth-child(1){
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+
+/*----- CONTENT SWITCH -----*/
+.content__switch{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+
+
+.friends__container{
+	display: none;
+}
+
+.friends__container .header{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+input[type="text"]{
+    padding: 7px 10px;
+    border: 2px solid #000;
+    border-radius: 3px;
+    font-size: 15px;
+    outline: none;
+}
+
+.button{
+    padding: 5px 20px;
+    border: 2px solid #000;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.friend__card{
+    margin-top: 10px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+
+.friend__card .card__about{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.friend__card .card__about img{
+    height: var(--friend-profile-img-size);
+    width: var(--friend-profile-img-size);
+    border-radius: 100%;
+}
+
+.friend__card p{
+    font-size: 18px;
+}

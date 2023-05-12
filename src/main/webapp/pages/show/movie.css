@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/*----- MOVIE CONTAINER -----*/
+
+.movie__container{
+    margin: 0 10%;
+    padding: 40px 0;
+    height: 100%;
+}
+
+.movie__header .heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.movie__header .title{
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.movie__header .savelist__icon{
+    width: 25px;
+    stroke: #ff9529;
+    stroke-width: 2px;
+    fill: transparent;
+}
+
+.movie__header .saved{
+    fill: #ff9529;
+}
+
+.movie__header .movie__header__bottom{
+    display: flex;
+    gap: 10px;
+    opacity: .7;
+}
+
+.movie__view{
+    margin-top: 25px;
+    display: flex;
+}
+
+.movie__view .poster{
+    height: 600px;
+}
+
+.movie__view iframe{
+    width: 100%;
+    border: none;
+}
+
+.tags__container .heading,
+.synopsis__container .heading,
+.review__header .heading{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.tags__container,
+.synopsis__container{
+    margin-top: 30px;
+}
+
+.tags__container .tags {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.tags__container .tags p{
+    padding: 6px 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #dddddd;
+    font-size: 13px;
+}
+
+.synopsis__container .heading{
+    margin-bottom: 10px;
+}
+
+.review__header{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.review__header button{
+    padding: 7px 15px;
+    border: 2px solid #000;
+    border-radius: 3px;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+}
+
+.reviews__container .review{
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.reviews__container .review .heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.reviews__container .review .heading p{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.reviews__container .review .heading .reviewtime{
+    opacity: .6;
+}
+
+.reviews__container .review .rating__container{
+    margin-bottom: 10px;
+}
+
+.reviews__container .review .rating__container .staricon,
+.add__review .rating__container .staricon{
+    width: 22px;
+    stroke: #ff9529;
+    stroke-width: 1.5px;
+    fill: transparent;
+}
+
+.reviews__container .review .rating__container .rated,
+.add__review .rating__container .rated{
+    fill: #ff9529;
+}
+
+.add__review{
+    margin: 15px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add__review textarea{
+    padding: 10px;
+    height: 100px;
+    border: 2px solid #000;
+    border-radius: 3px;
+    font-size: 15px;
+    resize: none;
+}
+
+
+/*----- MOVIE BODY -----*/
+
+.movie__body{
+    display: flex;
+    gap: 50px;
+}
+
+
+/*----- CONTENT -----*/
+
+.content{
+    width: 100%;
+}
+
+.synopsis__container .movie__synopsis{
+    text-align: justify;
+}
+
+.director__container .heading,
+.cast__container .heading{
+    margin: 30px 0 15px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.director__container .cards,
+.cast__container .cards{
+    display: flex;
+    gap: 30px;
+}
+
+.director__container .cast__card,
+.cast__container .cast__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.director__container .cast__card .image img,
+.cast__container .cast__card .image img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.director__container .cast__card .name,
+.cast__container .cast__card .name{
+    font-weight: 600;
+}
+
+.director__container .cast__card p,
+.cast__container .cast__card p{
+    font-size: 15px;
+}
+
+
+/*----- REVIEW CONTAINER -----*/
+
+.review__container{
+    width: 50%;
+}

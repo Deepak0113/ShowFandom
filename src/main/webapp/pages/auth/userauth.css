@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/*----- START CONTAINER -----*/
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth__container{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth__container .header{
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.auth__container .button{
+    width: 100%;
+}
+
+.auth__container .input__container{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.auth__container .input__container input{
+    width: 100%;
+}
+
+.auth__container .input__container .warning{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: calc(100% + 10px);
+    white-space: nowrap;
+    font-size: 14px;
+    color: red;
+}
+
+#toSignup,
+#toLogin{
+    margin: 30px 0 20px 0;
+    cursor: pointer;
+}
+
+#signup__layout{
+    display: none;
+}
+
+/*----- STARING LOADING POPUP AND ANIMATION -----*/
+.loading__container{
+    position: absolute;
+    top: 0;
+    padding: 10px 20px;
+    display: none;
+    align-items: center;
+    background-color: #E7EEFA;
+    border: 2px solid #B8CCE7;
+    border-radius: 3px;
+}
+
+.loading__container .loader{
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading__container .loader .load__icon{
+    height: 15px;
+    width: 15px;
+    background-color: #000;
+    animation: loadanimation 4s infinite;
+}
+
+.show__loading{
+	display: flex;
+}
+
+@keyframes loadanimation {
+    0% { transform: rotateZ(0deg); }
+    25% { transform: rotateZ(90deg); }
+    50% { transform: rotateZ(180deg); }
+    75% { transform: rotateZ(270deg); }
+    100% { transform: rotateZ(360deg); }
+}
+/*----- ENDING LOADING POPUP AND ANIMATION -----*/
+
+/*----- END CONTAINER -----*/

@@ -1,0 +1,229 @@
+:root{
+    --image-width: 250px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*----- HOME HEADER -----*/
+.home__header{
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: antiquewhite;
+}
+
+.link__button{
+    display: block;
+    padding: 5px 20px;
+    border: 2px solid #000;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #000;
+}
+
+.button{
+    padding: 5px 20px;
+    border: 2px solid #000;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+/*----- HOME LEFT -----*/
+.logo{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+/*----- HOME RIGHT -----*/
+.header__right{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 50px;
+}
+
+.search__container{
+    flex: 1;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 10px; */
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.search__container .dropdown{
+    height: 100%;
+    padding: 5px 20px;
+    border: none;
+    border-right: 2px solid #000;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search__container #search{
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: .5px;
+    outline: none;
+}
+
+.search__container svg{
+    height: 35px;
+}
+
+.search__container button{
+    padding: 6px 15px;
+    border: 2px solid grey;
+    font-size: 15px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: gray;
+    cursor: pointer;
+}
+
+
+/*----- PROFILE NAV -----*/
+.profile__nav{
+    position: relative;
+}
+
+.profile__avatar {
+    padding: 6px 10px;
+    border-radius: 100%;
+    /* border: 2px solid rgb(17, 255, 0);; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(17, 255, 0);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.profile__nav .profile__avatar:hover + .popup{
+    display: block;
+}
+
+.profile__nav .popup{
+    padding: 7px;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    min-width: 200px;
+    border-radius: 3px;
+    background-color: antiquewhite;
+    display: none;
+}
+
+.profile__nav .popup:hover{
+    display: block;
+}
+
+.profile__nav .popup a,
+.profile__nav .popup p {
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 3px;
+    color: #000;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.profile__nav .popup a:hover,
+.profile__nav .popup p:hover{
+    background-color: rgb(192, 192, 192);
+    transition: .2s ease;
+}
+
+
+.home__body .grid{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, var(--image-width));
+    justify-content: center;
+    gap: 25px;
+}
+
+.card{
+    position: relative;
+}
+
+.card img{
+    height: 100%;
+    width: var(--image-width);
+}
+
+.card .card__info{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8));
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    opacity: 0;
+    transition: .2s ease;
+    user-select: none;
+    cursor: pointer;
+}
+
+.card .card__info:hover{
+    opacity: 1;
+    transition: .2s ease;
+}
+
+
+
+/*----- CATEGORY CONTAINER -----*/
+.catagory__container select{
+    padding: 5px 10px;
+    font-size: 15px;
+    border: 2px solid #000;
+}
+
+.catagory__container select option{
+    padding: 7px;
+    height: 100px;
+    text-indent: 10px;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .home__body .grid {
+        grid-template-columns: repeat(3, var(--image-width));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home__body .grid {
+        grid-template-columns: repeat(2, var(--image-width));
+    }
+}
+  
+@media screen and (max-width: 480px) {
+    .home__body .grid {
+        grid-template-columns: repeat(1, var(--image-width));
+    }
+}

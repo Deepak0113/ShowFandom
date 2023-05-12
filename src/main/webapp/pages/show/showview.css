@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    overflow: hidden;
+}
+
+.show__container{
+    padding: 0 10%;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.show__view__landing,
+.movie__body{
+    scroll-snap-align: start;
+}
+
+.show__view__landing{
+    padding-top: 30px;
+    display: flex;
+    gap: 30px;
+    /* background-color: aqua; */
+}
+
+/* SHOW POSTER STARTS */
+.show__poster .poster{
+    height: 600px;
+}
+/* SHOW POSTER ENDS */
+
+
+/* SHOW HEADER STARTS */
+.show__header{
+    margin-top: 20px;
+}
+
+.show__header .heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.show__header .title{
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.show__header .savelist__icon{
+    width: 25px;
+    stroke: #ff9529;
+    stroke-width: 2px;
+    fill: transparent;
+}
+
+.show__header .saved{
+    fill: #ff9529;
+}
+
+.show__header .show__header__bottom{
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    opacity: .7;
+}
+/* SHOW HEADER ENDS */
+
+
+/* SHOW MINI INFO STARTS */
+.show__mini__info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.show__mini__info .show__trailer{
+    width: 100%;
+    border: none;
+    aspect-ratio: 16/9;
+}
+/* SHOW MINI INFO ENDS */
+
+
+/* SHOW RATINGS STARTS */
+.show__ratings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.show__ratings .rating{
+    text-align: center;
+}
+
+.show__ratings .rating p:nth-child(1){
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.show__ratings .rating p:nth-child(2){
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 16px;
+}
+/* SHOW RATINGS ENDS */
+
+/* SHOW TAGS CONTAINER STARTS */
+.tags__container{
+    display: flex;
+    gap: 20px;
+}
+
+.tags__container p{
+    padding: 6px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #dddddd;
+    font-size: 14px;
+}
+/* SHOW TAGS CONTAINER ENDS */

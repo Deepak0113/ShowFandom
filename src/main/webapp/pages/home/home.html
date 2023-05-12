@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Fandom</title>
+    
+    <link rel="stylesheet" href="../utility/common.css">
+    <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+    <div class="home__container">
+        <div class="home__header">
+            <p class="logo">MovieView</p>
+            <div class="header__right">
+                <div class="search__container">
+                    <select class="dropdown" name="" id="showtypeoption">
+                        <option value="movie">Movie</option>
+                        <option value="series">Series</option>
+                        <option value="anime">Anime</option>
+                    </select>
+                    <input type="text" id="search" placeholder="search here...">
+                    <button>Filter</button>
+                </div>
+
+                <!-- LOGIN BUTTON ONLY WHEN NOT LOGGED IN -->
+                <a href="../auth/userauth.html" class="link__button">Login</a>
+
+                <!-- PROFILE NAV ONLY WHEN LOGGED IN -->
+                <div class="profile__nav">
+                    <p class="profile__avatar">D</p>
+                    <div class="popup">
+                        <a>Profile</a>
+                        <a>Watch List</a>
+                        <p id="logoutBtn">Logout</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="catagory__container">
+            <!-- GENRES -->
+            <select name="" id="genresoptions">
+            	<option value="" selected>Genre</option>
+            </select>
+
+            <!-- RATING TYPE -->
+            <select name="" id="ratingtypesoption">
+            	<option value="">Rating Type</option>
+            </select>
+
+            <!-- COUNTRIES -->
+            <select name="" id="countriesoption">
+            	<option value="">Country</option>
+            </select>
+
+            <!-- SORT -->
+            <select name="" id="sortoption">
+            	<option value="" selected>Sort</option>
+                <option value="play-low-high">Playtime low to high</option>
+                <option value="play-high-low">Playtime high to low</option>
+                <option value="imdb-rating-low-high">IMDB Rating low to high</option>
+                <option value="imdb-rating-high-low">IMDB Rating high to low</option>
+                <option value="rotten-toatoes-rating-low-high">Rotten Tomatoes Rating low to high</option>
+                <option value="rotten-toatoes-rating-high-low">Rotten Tomatoes Rating high to low</option>
+                <option value="show-fandom-rating-low-high">Show Fandom Rating low to high</option>
+                <option value="show-fandom-rating-high-low">Show Fandom Rating high to low</option>
+            </select>
+            
+            <button class="button">Clear Filter</button>
+        </div>
+        
+        
+        
+        <div class="home__body">
+            <div class="grid" id="grid"></div>
+        </div>
+    </div>
+</body>
+
+<script src="./homeajax.js" ></script>
+<script src="./home.js" ></script>
+
+</html>

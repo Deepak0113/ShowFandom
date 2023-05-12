@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fandom</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/MovieFandom/pages/utility/common.css">
+    <link rel="stylesheet" href="/MovieFandom/pages/auth/userauth.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- FOR LOGIN -->
+        <div class="auth__container" id="login__layout">
+            <p class="header">Login</p>
+            <div class="input__container">
+                <input type="text" id="login_username" placeholder="Username">
+                <p class="warning">Invalid Username</p>
+            </div>
+            <div class="input__container">
+                <input type="password" id="login_password" placeholder="Password">
+                <p class="warning">Invalid Password</p>
+            </div>
+            <button id="loginBtn" class="button">Login</button>
+            <p id="toSignup">Create new account</p>
+            <a href="./forgotpassword.html">Forgot password</a>
+        </div>
+
+        <!-- FOR SIGNUP -->
+        <div class="auth__container" id="signup__layout">
+            <p class="header">Signup</p>
+            <div class="input__container">
+                <input type="text" id="name" placeholder="Name">
+                <p class="warning">Invalid Name</p>
+            </div>
+            <div class="input__container">
+                <input type="text" id="username" placeholder="Username">
+                <p class="warning">Invalid Username</p>
+            </div>
+            <div class="input__container">
+                <input type="text" id="email" placeholder="Email">
+                <p class="warning">Invalid Email Id</p>
+            </div>
+            <div class="input__container">
+                <input type="password" id="password" placeholder="Password">
+                <p class="warning">Invalid Password</p>
+            </div>
+            <button id="signupBtn" class="button">Signup</button>
+            <p id="toLogin">Already have account? Login</p>
+        </div>
+    </div>
+</body>
+
+<script src="/MovieFandom/pages/utility/validation.js"></script>
+<script src="/MovieFandom/pages/auth/userauth.js"></script>
+<script src="/MovieFandom/pages/auth/authajax.js"></script>
+
+</html>

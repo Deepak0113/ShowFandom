@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fandom</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../utility/common.css">
+    <link rel="stylesheet" href="/MovieFandom/pages/profile/profile.css">
+</head>
+<body>
+    <div class="profile__container">
+        <div class="profile__header">
+            <div class="circular__profile__big">D</div>
+            <div class="profile__info">
+                <p>Deepak</p>
+                <p>deepak0113</p>
+            </div>
+            <div class="profile__interest">
+                <div class="interest" id="followerBtn">
+                    <p>12</p>
+                    <p>Followers</p>
+                </div>
+                <div class="interest" id="followingBtn">
+                    <p>12</p>
+                    <p>Following</p>
+                </div>
+                <div class="interest" id="watchlistBtn">
+                    <p>30</p>
+                    <p>Watchlist</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="friends__container">
+
+            <!-- FRIEDNS REQUEST BUTTON CONTAINER -->
+            <div class="header">
+                <input type="text" id="friendId" placeholder="User ID">
+                <button class="button" id="sendReqBtn">Add Friend</button>
+            </div>
+
+            <!-- FOLLOWERS LIST CONTAINER -->
+            <div class="friends__list__container" id="followerslist"></div>
+            
+            <!-- FOLLOWING LIST CONTAINER -->
+            <div class="friends__list__container" id="followinglist"></div>
+        </div>
+    </div>
+    
+    <div id="notification__container" class="notification__container">
+        <p></p>
+    </div>
+</body>
+
+<script src="/MovieFandom/pages/utility/notification.js"></script>
+<script src="/MovieFandom/pages/profile/profileajax.js"></script>
+<script src="/MovieFandom/pages/profile/profile.js"></script>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowFandom</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../utility/common.css">
+    <link rel="stylesheet" href="./watchlist.css">
+</head>
+<body>
+    <div class="watchlist__container">
+        <div class="navbar">
+            <p class="nav-button" id="newlistBtn">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M38 26H26v12h-4V26H10v-4h12V10h4v12h12v4z"/><path d="M0 0h48v48H0z" fill="none"/></svg>
+                New
+            </p>
+        </div>
+    </div>
+
+    <div class="popup">
+        <div class="popup__content">
+            <p class="popup__heading">Create new watch list</p>
+            <div class="input__container">
+                <input type="text" id="newlistname" placeholder="Watch list title">
+            </div>
+            <div class="btn__container">
+                <button class="button cancel-btn" id="cancelBtn">Cancel</button>
+                <button class="button primary-btn" id="createBtn">Create</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./watchlistajax.js"></script>
+<script src="./watchlist.js"></script>
+
+</html>
