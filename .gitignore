@@ -1,0 +1,15 @@
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# Compiled files
+bin/
+
+# Dependency directories
+lib/
+node_modules/
+
+# IDE-specific files
+.DS_Store
+Thumbs.db
