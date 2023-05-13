@@ -9,6 +9,9 @@ const languagesOption = document.getElementById("languagesoption");
 const sortOption = document.getElementById("sortoption");
 
 
+let showArray = [];
+
+
 // ONLOAD GET ALL DATA
 window.onload = () => {
 	// check session login
@@ -110,11 +113,14 @@ function searchShow(){
 	
 	searchShowAjax(showType, searchname, genre, ratingType, country)
 	.then((res) => {
-		console.log(res);
-		sort(sortType, res)
+		showArray = res;
+		console.log(showArray);
+		
+		sortShows(showType, showArray)
 		.then((res) => {
+			console.log(res);
 			generateCards(res);
-		})
+		});
 	})
 }
 
@@ -133,38 +139,46 @@ function generateCards(movies){
 }
 
 
-// SORTINGS IMDB LOW TO HIGH
-function sortIMDBLowToHigh(res){
-	res.sort((a,b) => {return (a-b)});
+sortOption.addEventListener("change", (e) => {
+	const showType = e.target.value;
+	console.log(showArray);
+	sortShows(showType, showArray)
+	.then((res) => {
+		console.log(res);
+		generateCards(res);
+	});
+})
+
+
+function sortShows(sortType, array){
+	return new Promise((resolve) => {
+		if(sortType == "imdb-rating-low-high"){
+			array.sort((a,b) => {return (a.imdbrating-b.imdbrating)});
+			resolve(array);
+		}
+		else if(sortType == "imdb-rating-high-low"){
+			array.sort((a,b) => {return (a.imdbrating-b.imdbrating)*-1});
+			resolve(array);
+		}
+		else if(sortType == "rotten-toatoes-rating-low-high"){
+			array.sort((a,b) => {return (a.rottenorangerating-b.rottenorangerating)});
+			resolve(array);
+		}
+		else if(sortType == "rotten-toatoes-rating-high-low"){
+			array.sort((a,b) => {return (a.rottenorangerating-b.rottenorangerating)*-1});
+			resolve(array);
+		}
+		else if(sortType == "show-fandom-rating-low-high"){
+			array.sort((a,b) => {return (a.showfandomrating-b.showfandomrating)});
+			resolve(array);
+		}
+		else if(sortType == "show-fandom-rating-high-low"){
+			array.sort((a,b) => {return (a.showfandomrating-b.showfandomrating)*-1});
+			resolve(array);
+		}
+		else{
+			resolve(showArray);
+		}
+	})
 }
-
-// SORTINGS IMDB HIGH TO LOW
-function sortIMDBHighToLow(res){
-	res.sort((a,b) => {return (a-b)*-1});
-}
-
-// SORTINGS ROTTEN TOMATOES LOW TO HIGH
-function sortRottenTomatoesLowToHigh(res){
-	res.sort((a,b) => {return (a-b)});
-}
-
-// SORTINGS ROTTEN TOMATOES HIGH TO LOW
-function sortRottenTomatoesHighToLow(res){
-	res.sort((a,b) => {return (a-b)*-1});
-}
-
-// SORTINGS SHOW FANDOM LOW TO HIGH
-function sortShowFandomRatingLowToHigh(res){
-	res.sort((a,b) => {return (a-b)});
-}
-
-// SORTINGS SHOW FANDOM LOW TO HIGH
-function sortShowFandomRatingHighToLow(res){
-	res.sort((a,b) => {return (a-b)*-1});
-}
-
-
-
-
-
 
